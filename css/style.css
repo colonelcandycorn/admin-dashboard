@@ -1,7 +1,12 @@
 :root {
     --fnt-400: 1rem;
-    --fnt-500: 1.25rem;
-    --fnt-600: 1.5rem;
+    --fnt-500: 1.5rem;
+    --fnt-600: 1.75rem;
+
+    --primary-drk: #2b2d42;
+    --seconary-lt: #92dce5;
+    --neutral: #f8f7f9;
+    --accent: #f73c59;
 }
 
 
@@ -56,6 +61,11 @@ svg {
     display: block;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
@@ -73,28 +83,38 @@ svg {
 }
 
 body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
 }
 
 .sidebar {
-    padding-left: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    color: var(--neutral);
+    background-color: var(--primary-drk);
+    padding-left: 1.5rem;
+    padding-right: 2rem;
     grid-row: span 2;
 }
 
 .title {
+    padding-block: 1rem;
     display: flex;
     align-items: center;
 }
 
 .navigations {
-    height: 100%;
+    padding-block: 2rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
+
 ul {
+    display: grid;
     list-style: none;
 }
 
@@ -104,15 +124,55 @@ li > a {
     align-items: center;
 }
 
+.primary {
+    background-color: var(--neutral);
+    color: var(--primary-drk);
+    padding-left: 2rem;
+    display: grid;
+    padding-right: 4rem;
+    grid-template-columns: 2fr 1fr;
+}
+
+.primary > div {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-block: 2rem;
+}
+
+.primary > div + div {
+    padding-block: 1rem;
+    justify-content: right;
+}
+input {
+    padding-left: 1rem;
+    width: 100%;
+    border-radius: 12px;
+}
 /*  UTILITY CLASSES */
 
+.space-400 {
+    gap: 1rem;
+}
+
+
+.space-500 {
+    gap: 2rem;
+}
+
 .small-img {
-    height: 1.5rem;
+    height: 1.75rem;
 }
 .medium-img {
     height: 3rem;
 }
 
+.large-img {
+    height: 4rem;
+}
+
+.fnt-400 {
+    font-size: var(--fnt-400);
+}
 .fnt-500 {
     font-size: var(--fnt-500);
 }
@@ -120,8 +180,67 @@ li > a {
 .fnt-600 {
     font-size: var(--fnt-600);
 }
-.primary {
+
+.fnt-wt-500 {
+    font-weight: 500;
+}
+
+.fnt-wt-600 {
+    font-weight: 600;
+}
+
+.grid-display {
+    display: grid;
+}
+
+.flex-display {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.justify-lower {
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .container {
+    background-color: var(--seconary-lt);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+}
+
+.projects {
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 2rem;
+}
+
+.p-card {
+    border-radius: 12px;
+    min-height: 200px;
+    background-color: var(--neutral);
+}
+
+.announce {
+
+}
+
+.right-header {
+
+    grid-template-columns: 1fr;
+}
+
+button {
+    border-radius: 12px;
+    padding: 0 1rem 0 1rem;
+    background-color: var(--accent);
+    color: var(--neutral);
 }

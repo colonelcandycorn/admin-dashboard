@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="sidebar">
@@ -16,7 +19,7 @@
         </div>
         <div class="navigations">
             <div class="primary-nav">
-                <ul>
+                <ul class="space-400" aria-label="primary">
                     <li>
                         <a href="#" class="fnt-500"><img src="./images/home.svg" alt="home" class="small-img">Home</a>
                     </li>
@@ -30,21 +33,58 @@
                         <a href="#" class="fnt-500"><img src="./images/history.svg" alt="history" class="small-img">History</a>
                     </li>
                     <li>
+                        <a href="#" class="fnt-500"><img src="./images/tasks.svg" alt="tasks" class="small-img">Tasks</a>
+                    </li>
+                    <li>
                         <a href="#" class="fnt-500"><img src="./images/community.svg" alt="communities" class="small-img">Communities</a>
                     </li>
                 </ul>
             </div>
             <div class="secondary-nav">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="space-400">
+                    <li>
+                        <a href="#" class="fnt-500"><img src="./images/settings.svg" alt="settings" class="small-img">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fnt-500"><img src="./images/support.svg" alt="support" class="small-img">Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fnt-500"><img src="./images/privacy.svg" alt="privacy" class="small-img">Privacy</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="primary">poop</header>
-    <div class="container">
+    <header class="primary">
+        <div>
+            <form action="#" method="get" class="flex-display space-400" >
+                <img src="./images/search.svg" alt="search" class="small-img">
+                <input type="search" class="small-img fnt-500">
+            </form>
+            <div class="flex-display space-400">
+                <img src="./images/alien.png" alt="user icon" class="large-img">
+                <div>
+                    <p class="fnt-400 fnt-wt-500">Hi there,</p>
+                    <p class="fnt-500 fnt-wt-600">Sarah Candycorn (@colonelcandycorn)</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-header space-400">
+            <div class="flex-display space-500 align-center">
+                <a href="#">
+                    <img src="./images/alerts.svg" alt="alerts" class="small-img">
+                </a>
+                <img src="./images/alien.png" alt="user icon" class="medium-img">
+                <p> Sarah Candycorn</p>
+            </div>
+            <div class="justify-lower flex-display space-500 flex-full">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
         <div class="projects">
             <div class="p-card"></div>
             <div class="p-card"></div>
@@ -62,7 +102,7 @@
                 <li></li>
             </ul>
         </div>
-    </div>
+    </main>
     
 </body>
 </html>
